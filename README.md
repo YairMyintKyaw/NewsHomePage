@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add live site URL here](git@github.com:YairMyintKyaw/NewsHomePage.git)
+- Solution URL: [Add live site URL here](https://yairmyintkyaw.github.io/NewsHomePage/)
 - Solution URL: [Add solution URL here](https://github.com/YairMyintKyaw/NewsHomePage)
 
 ## My process
