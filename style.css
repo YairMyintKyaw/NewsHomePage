@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  font-family: "Inter", sans-serif;
+
+  /* Primary */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  /* Neutral */
+  --off-white: hsl(36, 100%, 99%);
+  --greyish-blue: hsl(233, 8%, 79%);
+  --dark-greyish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  /* font size */
+  --font-size: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow-x: hidden;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--dark-greyish-blue);
+}
+
+header ul li:hover {
+  color: var(--soft-red);
+}
+
+/* slide bar */
+.slideBar {
+  position: absolute;
+  right: 0;
+  top: -100vh;
+  width: 100vw;
+  min-height: 100%;
+  transition: all 1s ease;
+  background-color: hsl(236, 13%, 42%, 0.5);
+}
+
+.slideBar > nav {
+  background-color: var(--off-white);
+  width: 70%;
+  height: 100%;
+  min-width: 200px;
+  position: absolute;
+  right: 0;
+  padding: 1.5rem;
+}
+
+.closeIcon {
+  text-align: end;
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.slideBar > nav > ul {
+  display: flex;
+  flex-direction: column;
+  margin: 20% 0;
+  gap: 1rem;
+  font-size: calc(1rem + 1vw);
+  font-weight: 550;
+  color: var(--dark-greyish-blue);
+}
+
+.slideBar > nav > ul > li {
+  list-style-type: none;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.slideBar > nav > ul > li:hover {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+}
+
+/* icon */
+.openIcon {
+  display: none;
+  cursor: pointer;
+}
+
+/* main content section */
+.mainContentSection {
+  display: flex;
+  gap: 30px;
+}
+
+.left {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.right {
+  width: 34%;
+  flex: 1;
+}
+
+.mainContentImg {
+  content: url("assets/images/image-web-3-desktop.jpg");
+  width: 100%;
+}
+
+/* left bottom */
+.left-bottom {
+  display: flex;
+}
+
+/* make both child div have same width  */
+.left-bottom > div {
+  flex: 1;
+}
+
+.left-bottom > div:first-child::before {
+  content: "The Bright \a Future Of \a Web 3.0";
+  font-size: calc(2rem + 2vw);
+  /* overflow-wrap: break-word; */
+  font-weight: 800;
+}
+
+/* left bottom paragraph */
+.left-bottom > div:last-child {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.left-bottom > div:last-child > p {
+  font-size: calc(0.7rem + 0.5vmin);
+  word-spacing: 2px;
+  color: var(--dark-greyish-blue);
+}
+
+/* button */
+.left-bottom > div:last-child > button {
+  padding: 1rem 2rem;
+  align-self: flex-start;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--soft-red);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--off-white);
+}
+
+.left-bottom > div:last-child > button:hover {
+  background-color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+/* right */
+.right {
+  background-color: var(--very-dark-blue);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right > header {
+  color: var(--soft-orange);
+  font-size: calc(1.2rem + 0.4vw);
+}
+
+.rightSection > h3 {
+  color: var(--off-white);
+  font-size: 1.3rem;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+.rightSection:nth-child(3) {
+  border-top: solid 1px var(--greyish-blue);
+  border-bottom: solid 1px var(--greyish-blue);
+}
+
+.rightSection > h3 {
+  font-size: calc(0.7rem + 0.5vw);
+}
+
+.rightSection > p {
+  font-size: calc(0.7rem + 0.4vw);
+  color: var(--greyish-blue);
+  word-spacing: 3px;
+}
+
+/* topic section */
+.topicsSection {
+  margin-top: 2rem;
+  display: flex;
+  gap: 30px;
+}
+
+.specificTopic {
+  gap: 2rem;
+  width: 33%;
+  display: flex;
+}
+
+.specificTopic > div:first-child {
+  flex: 1;
+}
+
+.specificTopic > div > img {
+  width: 100%;
+  /* height: 100%; */
+  min-width: 101px;
+}
+
+.specificTopic > div:last-child {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+}
+
+.specificTopic > div:last-child > p {
+  overflow-wrap: break-word;
+}
+
+/* number 01,02,03 */
+.specificTopic > div:last-child > h3:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--greyish-blue);
+}
+.specificTopic > div:last-child > p {
+  margin-top: 5px;
+  font-size: calc(0.4rem + 0.5vw);
+}
+
+/* footer */
+footer.attribution {
+  color: var(--greyish-blue);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContentSection {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+  }
+
+  .left-bottom {
+    flex-direction: column;
+  }
+
+  .left-bottom > div:first-child::before {
+    content: "The Bright Future Of Web 3.0";
+  }
+  .right {
+    width: 100%;
+  }
+
+  .topicsSection {
+    flex-direction: column;
+  }
+
+  .specificTopic {
+    width: 100%;
+    justify-content: start;
+  }
+
+  .specificTopic > div:last-child {
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  header > nav > ul {
+    display: none;
+  }
+
+  .openIcon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .mainContentImg {
+    content: url("assets/images/image-web-3-mobile.jpg");
+  }
+}
