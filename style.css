@@ -22,13 +22,14 @@
   -webkit-box-sizing: border-box;
 }
 
-body {
-  max-height: 100vh;
-  max-width: 1440px;
+.mainContainer {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  max-width: 1440px;
   padding: 0 calc(2rem + 4vw);
+
   /* overflow: hidden; */
 }
 
@@ -278,12 +279,20 @@ header ul li:hover {
 
 /* footer */
 footer.attribution {
+  margin-top: 2rem;
   color: var(--greyish-blue);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  background-color: var(--very-dark-blue);
   padding: 5px;
   font-size: 0.8rem;
+}
+
+footer.attribution > a {
+  text-decoration: none;
+  color: var(--soft-orange);
+}
+
+footer > div {
+  position: absolute;
 }
 
 @media screen and (max-width: 1000px) {
